@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'hometab.dart';
+import 'exploretab.dart';
+import 'profiletab.dart';
 void main() {
   runApp(MyApp());
 }
@@ -87,33 +89,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class HomeTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Home Tab'),
-    );
-  }
-}
-
-class ExploreTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Explore Tab'),
-    );
-  }
-}
-
-class ProfileTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Profile Tab'),
     );
   }
 }
