@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'hometab.dart';
-import 'exploretab.dart';
+import 'chatlist.dart';
 import 'profiletab.dart';
 void main() {
   runApp(MyApp());
@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Custom Navigation App',
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
@@ -29,8 +28,8 @@ class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
 
   final List<Widget> _tabs = [
-    HomeTab(),
-    ExploreTab(),
+    const HomeTab(),
+    ChatList(),
     ProfileTab(),
   ];
 
@@ -38,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Custom Navigation App'),
+        title: Text('Flutter App'),
       ),
       body: _tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -54,8 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            label: 'Explore',
+            icon: Icon(Icons.chat),
+            label: 'Chat',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
